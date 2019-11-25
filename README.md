@@ -11,11 +11,17 @@ Procedure To Run the Program
 Open the python console and enter the following commands:
 
 import dataset
-training_data, validation_data, test_data = dataset.getdata()
-import network
-import imagetogreyscale
-net=network.Network([784,30,10])
-net.SGD(training_data,30,10,test_data=test_data)
-test=imagetogreyscale.data("<Image File Name>")
-net.predict(test)
 
+training_data, validation_data, test_data = dataset.getdata()
+
+import network
+
+import imagetogreyscale
+
+net=network.Network([784,30,10])
+
+net.SGD(training_data,30,10,test_data=test_data)
+
+test=imagetogreyscale.data("<Image File Name>")
+  
+net.predict(test)
